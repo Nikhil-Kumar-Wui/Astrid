@@ -11,7 +11,7 @@ Astrid uses an actor-critic style pipeline with three cooperating agents plus
 a memory layer, rather than one model trying to plan, act, and grade itself.
 
 ```
-<img width="2760" height="3640" alt="astrid_full_architecture_dark" src="https://github.com/user-attachments/assets/694867a4-8a7f-4e2e-a0cd-2cf05453874e" />
+
 
 User goal
    │
@@ -37,6 +37,9 @@ Orchestrator ── queries memory for similar past runs
    ▼
 Memory writer ── embeds outcome, stores in Supabase pgvector
 ```
+
+<img width="2760" height="3640" alt="astrid_full_architecture_dark" src="https://github.com/user-attachments/assets/cb8d0cc2-21ce-4444-951e-e03f5a03b6de" />
+
 
 **Orchestrator** — breaks the goal into an ordered list of atomic subtasks,
 queries memory first so prior learnings inform the plan, and tracks progress
