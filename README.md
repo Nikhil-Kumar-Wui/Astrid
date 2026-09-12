@@ -11,6 +11,8 @@ Astrid uses an actor-critic style pipeline with three cooperating agents plus
 a memory layer, rather than one model trying to plan, act, and grade itself.
 
 ```
+<img width="2760" height="3640" alt="astrid_full_architecture_dark" src="https://github.com/user-attachments/assets/694867a4-8a7f-4e2e-a0cd-2cf05453874e" />
+
 User goal
    │
    ▼
@@ -60,6 +62,8 @@ so a semantically similar future goal retrieves this run's learnings.
 | In-flight plan memory | One run | Process memory | Active step index, scratchpad (AMI id, ARN, DNS name) |
 | Local session memory | Across restarts | `quiz_memory.json` | Instant exact-match recall of previously corrected answers |
 | Global semantic memory | Across sessions & users | Supabase Postgres + pgvector | Similarity search over past goals via `all-MiniLM-L6-v2` embeddings |
+
+<img width="2720" height="2160" alt="astrid_supabase_roles" src="https://github.com/user-attachments/assets/623fbe71-8107-432f-b287-74b22cfc302e" />
 
 Supabase specifically plays three distinct roles, not one:
 
