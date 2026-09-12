@@ -1,4 +1,4 @@
-# Astrid — Multi-Agent RAG Browser Agent (100% free stack)
+# Astrid — Multi-Agent RAG Browser Agent 
 
 Web agent that takes a plain-language goal, browses the real web with Playwright,
 using multiple LLM agents (orchestrator, retriever, planner, verifier) backed
