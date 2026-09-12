@@ -175,7 +175,10 @@ graph LR
 
 1. **In-Flight Plan Memory**: Maintained in backend execution loops, capturing ephemeral context, step outputs, and intermediate resource IDs (e.g. `ami_id`, `tg_arn`, `alb_dns`).
 2. **Local Session Memory (`quiz_memory.json`)**: Persists across restarts. When an online test or lab is re-executed, previously scored correct answers are instantly loaded, guaranteeing zero repeated errors.
-3. **Global Semantic Vector Memory**: Uses `all-MiniLM-L6-v2` embeddings in Supabase `pgvector` to semantically match new user goals against previously solved tasks.
+3. **Global Semantic Vector Memory (Supabase + pgvector)**: 
+   - **Supabase Authentication**: Manages Google OAuth logins and issues JWT tokens to guard the WebSocket `/ws/task` gateway.
+   - **Relational Storage (PostgreSQL)**: Persists user profiles, historical tasks, and step-by-step agent trajectories with Row-Level Security (RLS).
+   - **Vector Similarity Search (`pgvector`)**: Stores 384-dimensional dense vector embeddings generated via `all-MiniLM-L6-v2` to semantically match new user goals against previously successful execution trajectories.
 
 ---
 
