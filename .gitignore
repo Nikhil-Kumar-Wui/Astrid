@@ -66,3 +66,5 @@ yarn-error.log*
 *.swo
 .DS_Store
 Thumbs.db
+Astrid-main/
+
