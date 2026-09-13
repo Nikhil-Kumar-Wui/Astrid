@@ -1,4 +1,4 @@
-# Astrid — Autonomous Multi-Agent Browser AI & Cloud Automation Platform
+# Astrid :    Autonomous Multi-Agent Browser AI & Cloud Automation Platform
 
 Astrid takes a plain-language goal and completes it end to end: it reasons about
 what needs to happen, browses the real web with Playwright/CDP, calls AWS
